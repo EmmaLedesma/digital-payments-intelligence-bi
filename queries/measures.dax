@@ -1,0 +1,191 @@
+// Medidas DAX del reporte (extraídas del .pbix con scripts/export_pbix_data.py)
+
+// Tabla: PDA_Tipo_Provincia_10000_Habitantes
+PDA_por_10000_hab =
+SUM(PDA_Tipo_Provincia_10000_Habitantes[Cant_En_1/12/25])
+
+// Tabla: Medidas
+Ticket_Promedio =
+DIVIDE([Monto_Total_Transaccionado],[Total_Transacciones])
+
+// Tabla: Medidas
+Crecimiento_YoY_% =
+DIVIDE([Total_Transacciones]- [Transacciones_LY],[Transacciones_LY])
+
+// Tabla: Medidas
+Monto_Total_Transaccionado =
+SUM(Fact_Transacciones[Monto])
+
+// Tabla: Medidas
+Total_Transacciones =
+SUM(Fact_Transacciones[Cantidades])
+
+// Tabla: Medidas
+Transacciones_LY =
+CALCULATE([Total_Transacciones],SAMEPERIODLASTYEAR(Calendario[Date]))
+
+// Tabla: Medidas
+Total_Puntos_Acceso =
+SUM(Fact_Puntos_Acceso[Cantidades])
+
+// Tabla: Medidas
+Total_Tenencia_Cuentas =
+SUM(Fact_Tenencia_Cuentas[Cantidades])
+
+// Tabla: Medidas
+Tasa_Promedio_Habitantes =
+AVERAGE(Fact_Puntos_Acceso_Tasas[Tasa_cada_10000])
+
+// Tabla: Medidas
+Cantidad_Cuentas_Por_Edad =
+CALCULATE([Total_Tenencia_Cuentas], VALUES(Dim_Rango_Etario[Rango_Etario]))
+
+// Tabla: Medidas
+Share_Medio_Pago_% =
+DIVIDE([Total_Transacciones], CALCULATE([Total_Transacciones], ALL(Dim_Conformada)))
+
+// Tabla: Medidas
+%_Share_Canal =
+DIVIDE([Total_Transacciones], CALCULATE([Total_Transacciones], ALL(Dim_Conformada)))
+
+// Tabla: Medidas
+Tasa_Prov =
+AVERAGE(Fact_Puntos_Acceso_Tasas[Tasa_cada_10000])
+
+// Tabla: Medidas
+Share_PDA =
+DIVIDE([Total_Puntos_Acceso], CALCULATE([Total_Puntos_Acceso], ALL(Dim_Entidades)))
+
+// Tabla: Calendario
+Total_Transferencias =
+CALCULATE(
+    [Total_Transacciones],
+    KEEPFILTERS(Dim_Conformada[ID_Categoria] = 3)
+)
+
+// Tabla: Calendario
+Total_Cant_Tarjetas_Credito =
+CALCULATE(
+    [Total_Transacciones],
+    KEEPFILTERS(Dim_Conformada[ID_Categoria] = 7)
+)
+
+// Tabla: Medidas
+Total_Cant_Transferencias =
+CALCULATE(
+    [Total_Transacciones],
+    KEEPFILTERS(Dim_Conformada[ID_Categoria] = 3)
+)
+
+// Tabla: Calendario
+Total_Cant_Cheques_Electronicos =
+CALCULATE(
+    [Total_Transacciones],
+    KEEPFILTERS(Dim_Conformada[ID_Categoria] = 2)
+)
+
+// Tabla: Medidas
+Variacion_Operaciones =
+VAR Anterior = [Transacciones_LY]
+RETURN
+    IF(
+        NOT ISBLANK(Anterior),
+        [Total_Transacciones] - Anterior
+    )
+
+// Tabla: Medidas
+Total_Pagos_Interoperables =
+CALCULATE(
+    [Total_Transacciones],
+    KEEPFILTERS(Dim_Conformada[ID_Categoria] = 4)
+)
+
+// Tabla: Medidas
+Total_Operaciones_Debito =
+CALCULATE(
+    [Total_Transacciones],
+    KEEPFILTERS(
+        Dim_Conformada[ID_Categoria] IN {15, 16}
+    )
+)
+
+// Tabla: Medidas
+Personas_Con_Alguna_Cuenta =
+CALCULATE(
+    [Total_Tenencia_Cuentas],
+    Dim_Tipo_Cuenta[ID_Tipo_Cuenta] = 6
+)
+
+// Tabla: Medidas
+Personas_Solo_Cuenta_Bancaria =
+CALCULATE(
+    [Total_Tenencia_Cuentas],
+    Dim_Tipo_Cuenta[ID_Tipo_Cuenta] = 1
+)
+
+// Tabla: Medidas
+Personas_Solo_Cuenta_Pago =
+CALCULATE(
+    [Total_Tenencia_Cuentas],
+    Dim_Tipo_Cuenta[ID_Tipo_Cuenta] = 2
+)
+
+// Tabla: Medidas
+Personas_Ambos_Tipos_Cuenta =
+CALCULATE(
+    [Total_Tenencia_Cuentas],
+    Dim_Tipo_Cuenta[ID_Tipo_Cuenta] = 3
+)
+
+// Tabla: Medidas
+Crecimiento_Transferencias_% =
+CALCULATE(
+    [Crecimiento_YoY_%],
+    Dim_Conformada[ID_Categoria] = 3
+)
+
+// Tabla: Medidas
+Crecimiento_Interoperables_% =
+CALCULATE(
+    [Crecimiento_YoY_%],
+    Dim_Conformada[ID_Categoria] = 4
+)
+
+// Tabla: Medidas
+Personas_Ambas_Cuentas_% =
+DIVIDE(
+    [Personas_Ambos_Tipos_Cuenta],
+    [Personas_Con_Alguna_Cuenta]
+)
+
+// Tabla: Medidas
+Participacion_Debito_Internet_% =
+VAR Internet =
+    CALCULATE(
+        [Total_Transacciones],
+        Dim_Conformada[ID_Categoria] = 16
+    )
+VAR DebitoTotal =
+    CALCULATE(
+        [Total_Transacciones],
+        Dim_Conformada[ID_Categoria] IN {15, 16}
+    )
+RETURN
+    DIVIDE(Internet, DebitoTotal)
+
+// Tabla: Medidas
+Puntos_Acceso_Provincia =
+SUM(Fact_Puntos_Acceso_Provincia[Cantidades])
+
+// Tabla: Medidas
+Provincias_Con_Datos =
+DISTINCTCOUNT(
+    Fact_Puntos_Acceso_Provincia[ID_Provincia]
+)
+
+// Tabla: Medidas
+Puntos_Cada_10000_Adultos =
+IF(
+    HASONEVALUE(Dim_Provincia[ID_Provincia]),
+    SUM(Fact_Puntos_Acceso_Tasas[Tasa_cada_10000])
+)

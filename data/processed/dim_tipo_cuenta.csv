@@ -1,0 +1,7 @@
+ID_Tipo_Cuenta,Nombre,Nombre_Corto
+1,Sólo cuentas bancarias / Only bank accounts,Solo bancarias
+2,Sólo cuentas de pago / Only payment accounts,Solo de pago
+3,Cuentas bancarias y de pago / Bank and payment accounts,Ambos tipos
+4,Al menos una cuenta bancaria / At least one bank account,Al menos una cuenta bancaria / At least one bank account
+5,Al menos una cuenta de pago / At least one payment account,Al menos una cuenta de pago / At least one payment account
+6,Al menos una cuenta / At least one account,Al menos una cuenta / At least one account

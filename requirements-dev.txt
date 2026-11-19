@@ -1,0 +1,3 @@
+-r requirements.txt
+pytest>=8.0
+pbixray>=0.3   # solo para scripts/export_pbix_data.py

@@ -1,0 +1,11 @@
+// Tabla calculada Calendario
+Calendario =
+ADDCOLUMNS(
+    CALENDAR(DATE(2019,1,1), DATE(2025,12,31)),
+    "Año",          YEAR([Date]),
+    "Mes_Numero",   MONTH([Date]),
+    "Mes_Nombre",   FORMAT([Date], "MMMM", "es-AR"),
+    "Trimestre",    "T" & QUARTER([Date]),
+    "Semestre",     IF(MONTH([Date]) <= 6, "S1", "S2"),
+    "Dia_Semana",   FORMAT([Date], "DDDD", "es-AR")
+)

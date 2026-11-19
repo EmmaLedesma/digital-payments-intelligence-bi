@@ -1,0 +1,81 @@
+ID_Entidad,Nombre,Tipo
+1,Banco Coinag,Bancos Privados / Private banks
+2,Banco de Galicia y Buenos Aires,Bancos Privados / Private banks
+3,Banco de Servicios Financieros,Bancos Privados / Private banks
+4,Banco del Sol,Bancos Privados / Private banks
+5,Banco Hipotecario,Bancos Privados / Private banks
+6,Banco Santander,Bancos Privados / Private banks
+7,Banco Sucredito Regional,Bancos Privados / Private banks
+8,Banco Supervielle,Bancos Privados / Private banks
+9,Nuevo Banco de Santa Fe,Bancos Privados / Private banks
+10,Banco de Corrientes,Bancos Públicos / State-owned banks
+11,Banco Provincia del Neuquen,Bancos Públicos / State-owned banks
+12,Banco Rioja,Bancos Públicos / State-owned banks
+13,Nuevo Banco del Chaco,Bancos Públicos / State-owned banks
+14,Compañia Financiera Argentina,Compañías financieras / Financial companies
+15,Montemar Compañia Financiera,Compañías financieras / Financial companies
+16,Naranja Digital,Compañías financieras / Financial companies
+17,Banco Bica,Bancos Privados / Private banks
+18,Banco Columbia,Bancos Privados / Private banks
+19,Banco Comafi,Bancos Privados / Private banks
+20,Banco Credicoop Cooperativo Limitado,Bancos Privados / Private banks
+21,Banco de Comercio,Bancos Privados / Private banks
+22,Banco de la Republica Oriental del Uruguay,Bancos Privados / Private banks
+23,Banco de San Juan,Bancos Privados / Private banks
+24,Banco de Santa Cruz,Bancos Privados / Private banks
+25,Banco de Santiago del Estero,Bancos Privados / Private banks
+26,Banco de Servicios y Transacciones,Bancos Privados / Private banks
+27,Banco del Tucuman,Bancos Privados / Private banks
+28,Banco Dino,Bancos Privados / Private banks
+29,Banco Industrial,Bancos Privados / Private banks
+30,Banco Itau Argentina,Bancos Privados / Private banks
+31,Banco Macro,Bancos Privados / Private banks
+32,Banco Masventas,Bancos Privados / Private banks
+33,Banco Meridian,Bancos Privados / Private banks
+34,Banco Patagonia,Bancos Privados / Private banks
+35,Banco Piano,Bancos Privados / Private banks
+36,Banco Voii,Bancos Privados / Private banks
+37,BBVA Banco Frances,Bancos Privados / Private banks
+38,Citibank,Bancos Privados / Private banks
+39,HSBC Bank Argentina,Bancos Privados / Private banks
+40,Industrial and Commercial Bank of China,Bancos Privados / Private banks
+41,Nuevo Banco de Entre Rios,Bancos Privados / Private banks
+42,Open Bank,Bancos Privados / Private banks
+43,Banco de Formosa,Bancos Públicos / State-owned banks
+44,Banco de la Ciudad de Buenos Aires,Bancos Públicos / State-owned banks
+45,Banco de la Nacion Argentina,Bancos Públicos / State-owned banks
+46,Banco de la Pampa,Bancos Públicos / State-owned banks
+47,Banco de la Provincia de Buenos Aires,Bancos Públicos / State-owned banks
+48,Banco de la Provincia de Cordoba,Bancos Públicos / State-owned banks
+49,Banco del Chubut,Bancos Públicos / State-owned banks
+50,Banco Municipal de Rosario,Bancos Públicos / State-owned banks
+51,Banco Provincia de Tierra del Fuego,Bancos Públicos / State-owned banks
+52,Finandino Compañia Financiera,Compañías financieras / Financial companies
+53,ATMs no bancarios / Non-bank ATMs,Entidades no financieras / Non-financial Instituti
+54,Bacs Banco de Credito Y Securitizacion,Bancos Privados / Private banks
+55,Banco Bradesco Argentina,Bancos Privados / Private banks
+56,Banco Cetelem Argentina,Bancos Privados / Private banks
+57,Banco CMF,Bancos Privados / Private banks
+58,Banco de Valores,Bancos Privados / Private banks
+59,Banco Interfinanzas,Bancos Privados / Private banks
+60,Banco Julio,Bancos Privados / Private banks
+61,Banco Mariva,Bancos Privados / Private banks
+62,Banco Roela,Bancos Privados / Private banks
+63,Banco Saenz,Bancos Privados / Private banks
+64,Bank of America,Bancos Privados / Private banks
+65,BNP Paribas,Bancos Privados / Private banks
+66,JPmorgan Chase Bank,Bancos Privados / Private banks
+67,RCI Banque,Bancos Privados / Private banks
+68,The Bank of Tokyo-Mitsubishi,Bancos Privados / Private banks
+69,Banco de Inversion Y Comercio Exterior,Bancos Públicos / State-owned banks
+70,Cordial Compañia Financiera,Compañías financieras / Financial companies
+71,Credito Regional,Compañías financieras / Financial companies
+72,FCA Compañia Financiera,Compañías financieras / Financial companies
+73,Ford Credit Compañia Financiera,Compañías financieras / Financial companies
+74,GPAT Compañia Financiera,Compañías financieras / Financial companies
+75,John Deere Credit Compañia Financiera,Compañías financieras / Financial companies
+76,Multifinanzas Compañia Financiera,Compañías financieras / Financial companies
+77,PSA Finance Argentina Compañia Financiera,Compañías financieras / Financial companies
+78,Rombo Compañia Financiera,Compañías financieras / Financial companies
+79,Toyota Compañia Financiera de Argentina,Compañías financieras / Financial companies
+80,Volkwagen Financial Services Compañia Financiera,Compañías financieras / Financial companies

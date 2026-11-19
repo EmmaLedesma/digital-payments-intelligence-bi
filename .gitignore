@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Editores / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Power BI (archivos temporales; el .pbix final SÍ se versiona)
+*.pbi/
+.pbi/
+localSettings.json
+cache.abf
+
+# Streamlit
+.streamlit/secrets.toml

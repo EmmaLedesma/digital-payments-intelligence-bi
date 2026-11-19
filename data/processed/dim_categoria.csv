@@ -1,0 +1,17 @@
+ID_Categoria,Nombre,Tipo
+1,Cheques Fisicos,Pago
+2,Cheques Electronicos,Pago
+3,Transferencias Inmediatas,Pago
+4,Pagos Transferencias Interoperables,Pago
+5,Debitos Directos,Pago
+6,Debitos Inmediatos,Pago
+7,Tarjetas de Credito,Pago
+8,Tarjetas Prepagas,Pago
+9,Cajeros automaticos,Push
+10,Cajeros Digitales,Push
+11,Cajeros automaticos,Extracciones
+12,Extrabancarias con tarjeta de débito,Extracciones
+13,Extrabancarias con transferencia,Extracciones
+14,Cajeros automaticos,Extracciones
+15,Tarjetas de débito POS,Pago
+16,Tarjetas de débito Internet,Pago
